@@ -3,10 +3,9 @@ package com.billderouin.gramster.adapters;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 
-import com.billderouin.gramster.fragments.RecentFragment;
-import com.billderouin.gramster.fragments.TrendingFragment;
+import com.billderouin.gramster.fragments.StreamRecentFragment;
+import com.billderouin.gramster.fragments.StreamTrendingFragment;
 
 /**
  * Created by bill on 7/11/15.
@@ -17,8 +16,8 @@ public class StreamViewPagerAdapter extends FragmentPagerAdapter {
     private static final String TAG_TRENDING = "tag_trending";
     private static final String[] TAB_TITLES = new String[] { "Recent", "Trending" };
 
-    private RecentFragment mRecentFragment;
-    private TrendingFragment mTrendingFragment;
+    private StreamRecentFragment mRecentFragment;
+    private StreamTrendingFragment mTrendingFragment;
 
     public StreamViewPagerAdapter(FragmentActivity activity) {
         super(activity.getSupportFragmentManager());
@@ -37,14 +36,14 @@ public class StreamViewPagerAdapter extends FragmentPagerAdapter {
             default:
             case 0:
                 if (mRecentFragment == null) {
-                    mRecentFragment = new RecentFragment();
+                    mRecentFragment = new StreamRecentFragment();
                 }
                 fragment = mRecentFragment;
                 break;
             // Trending
             case 1:
                 if (mTrendingFragment == null) {
-                    mTrendingFragment = new TrendingFragment();
+                    mTrendingFragment = new StreamTrendingFragment();
                 }
                 fragment = mTrendingFragment;
                 break;

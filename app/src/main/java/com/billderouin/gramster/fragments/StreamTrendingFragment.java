@@ -11,14 +11,13 @@ import com.billderouin.gramster.R;
 /**
  * Created by bill on 7/11/15.
  */
-public class RecentFragment extends Fragment {
+public class StreamTrendingFragment extends Fragment {
 
-    // Required default constructor
-    public RecentFragment() {}
+    public StreamTrendingFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_recent, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_trending, container, false);
 
         return rootView;
     }
