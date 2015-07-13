@@ -73,4 +73,13 @@ public class PostListAdapter extends RecyclerView.Adapter<PostListAdapter.ViewHo
     public int getItemCount() {
         return mPosts.size();
     }
+
+    public boolean contains(String id) {
+        for (Post p : mPosts) {
+            if (p.getmId().equals(id)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

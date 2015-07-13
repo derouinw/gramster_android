@@ -10,18 +10,28 @@ public class Post {
 
     private static final String HOST = "http://10.121.14.27:3000";
 
+    private String mId;
     private String mTitle;
     private String mAuthor;
     private String mPath;
     private String mDescription;
     private String mPosted;
 
-    public Post(String mTitle, String mAuthor, String mPath, String mDescription, String mPosted) {
+    public Post(String mId, String mTitle, String mAuthor, String mPath, String mDescription, String mPosted) {
+        this.mId = mId;
         this.mTitle = mTitle;
         this.mAuthor = mAuthor;
         this.mPath = mPath.startsWith("http://") ? mPath : HOST + mPath;
         this.mDescription = mDescription;
         this.mPosted = mPosted;
+    }
+
+    public String getmId() {
+        return mId;
+    }
+
+    public void setmId(String mId) {
+        this.mId = mId;
     }
 
     public String getmTitle() {
